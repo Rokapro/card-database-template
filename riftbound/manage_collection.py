@@ -156,10 +156,20 @@ def add_card():
     alt_art = bool(selected_card.get("alternate_art", False))
     overnumbered = bool(selected_card.get("overnumbered", False))
 
+    while True:
+        try:
+            quantity_to_add = int(input("Enter quantity to add (1 or more): ").strip())
+            if quantity_to_add >= 1:
+                break
+            else:
+                print("Quantity must be 1 or more.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
     new_card = {
         "name": selected_card["name"],
         "set": selected_card["set_id"],
-        "quantity": "1",
+        "quantity": str(quantity_to_add),
         "type": card_type,
         "color": card_color,
         "altArt": str(alt_art).lower(),
@@ -172,7 +182,7 @@ def add_card():
 
     if existing_index is not None:
         existing_card = cards[existing_index]
-        quantity = int(existing_card.get("quantity", "0") or "0") + 1
+        quantity = int(existing_card.get("quantity", "0") or "0") + quantity_to_add
         existing_card["quantity"] = str(quantity)
         print(f"Updated quantity for {existing_card['name']} ({existing_card['set']}). New quantity: {quantity}")
     else:

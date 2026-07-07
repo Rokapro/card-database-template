@@ -38,7 +38,7 @@ function parseCSV(csvText) {
 
 function renderCards(cards) {
   const filteredCards = cards.filter((card) => {
-    const matchesType = activeFilter === "All" || card.type.toLowerCase() === activeFilter.toLowerCase();
+    const matchesType = activeFilter === "All" || card.type.trim().toLowerCase() === activeFilter.toLowerCase();
     const searchText = searchBar.value.toLowerCase().trim();
 
     const matchesSearch = searchText === "" ||
@@ -66,10 +66,10 @@ function renderCards(cards) {
       <div class="col-6 col-md-4 col-lg-3 card-wrapper"
            data-name="${card.name.toLowerCase()}"
            data-set="${card.set.toLowerCase()}"
-           data-type="${card.type.toLowerCase()}"
+           data-type="${card.type.trim().toLowerCase()}"
            data-color="${(card.color || "").toLowerCase()}">
         <div class="card-custom">
-          <img src="riftbound-images/${card.image}" class="card-img${(card.type||'').toLowerCase() === 'battlefield' ? ' rotate-90' : ''}" alt="${card.name}">
+          <img src="riftbound-images/${card.image}" class="card-img${(card.type||'').trim().toLowerCase() === 'battlefield' ? ' rotate-90' : ''}" alt="${card.name}">
         </div>
         <div class="card-caption">
           <strong>${card.name}</strong><br>
@@ -84,9 +84,9 @@ function renderCards(cards) {
 function sortCardsByNumber(cards) {
   if (activeFilter === "All") {
     const typePriority = {
-      unit: 1,
-      spell: 2,
-      legend: 3,
+      legend: 1,
+      unit: 2,
+      spell: 3,
       rune: 4,
       gear: 5,
       battlefield: 6,
@@ -100,8 +100,8 @@ function sortCardsByNumber(cards) {
         return colorA.localeCompare(colorB);
       }
 
-      const typeA = (a.type || "").toLowerCase();
-      const typeB = (b.type || "").toLowerCase();
+      const typeA = (a.type || "").trim().toLowerCase();
+      const typeB = (b.type || "").trim().toLowerCase();
       const priorityA = typePriority[typeA] ?? 99;
       const priorityB = typePriority[typeB] ?? 99;
       if (priorityA !== priorityB) {

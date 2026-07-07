@@ -1,3 +1,15 @@
 name,set,quantity,type,color,altArt,overnumbered,image
 Azir - Ascendant (Alternate Art),SFD,1,UNIT,CALM,true,false,azir-ascendant-alternate-art-sfd-a.avif
 Diana - Scorn of the Moon,UNL,2,LEGEND,CHAOS&MIND,false,false,diana-scorn-of-the-moon-unl.avif
+Vex - Gloomist,UNL,1,LEGEND,CALM&CHAOS,false,false,vex-gloomist-unl.avif
+Vi - Piltover Enforcer,UNL,2,LEGEND,FURY&ORDER,false,false,vi-piltover-enforcer-unl.avif
+Azir - Emperor of the Sands,SFD,1,LEGEND,CALM&ORDER,false,false,azir-emperor-of-the-sands-sfd.avif
+Lillia - Bashful Bloom,UNL,1,LEGEND,CALM&MIND,false,false,lillia-bashful-bloom-unl.avif
+Pyke - Bloodharbor Ripper,UNL,1,LEGEND,CHAOS&FURY,false,false,pyke-bloodharbor-ripper-unl.avif
+Rengar - Pridestalker,UNL,1,LEGEND,BODY&FURY,false,false,rengar-pridestalker-unl.avif
+Lucian - Purifier,SFD,1,LEGEND,BODY&FURY,false,false,lucian-purifier-sfd.avif
+LeBlanc - Deceiver,UNL,2,LEGEND,MIND&ORDER,false,false,leblanc-deceiver-unl.avif
+Irelia - Blade Dancer,SFD,1,LEGEND,CALM&CHAOS,false,false,irelia-blade-dancer-sfd.avif
+Ornn - Fire Below the Mountain,SFD,1,LEGEND,CALM&MIND,false,false,ornn-fire-below-the-mountain-sfd.avif
+Jax - Grandmaster At Arms,SFD,1,LEGEND,BODY&CALM,false,false,jax-grandmaster-at-arms-sfd.avif
+Ivern - Green Father,UNL,1,LEGEND,CALM&ORDER,false,false,ivern-green-father-unl.avif

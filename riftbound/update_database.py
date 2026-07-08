@@ -82,13 +82,13 @@ def insert_cards_into_db(conn, cards):
             card["id"],
             card.get("name"),
             set_data.get("set_id"),
-            set_data.get("name"),
+            set_data.get("label"),
             classification.get("type"),
             "&".join(classification.get("domain", [])),
             metadata.get("alternate_art", False),
             metadata.get("overnumbered", False),
             media.get("image_url"),
-            card.get("rarity_name"),
+            classification.get("rarity"),
         )
         cards_to_insert.append(card_data)
 

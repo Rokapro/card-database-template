@@ -167,6 +167,7 @@ function sortCards(cards, sortBy) {
 				valA = a.collector_number;
 				valB = b.collector_number;
 				return valA - valB;
+
 			case 'rarity':
 				let rarityA = a.isPromo ? "promo" : a.rarity.toLowerCase();
 				let rarityB = b.isPromo ? "promo" : b.rarity.toLowerCase();

@@ -55,6 +55,7 @@ def create_database_table(conn):
             name TEXT NOT NULL,
             set_id TEXT NOT NULL,
             set_name TEXT,
+            collector_number INTEGER,
             type TEXT,
             domain TEXT,
             alternate_art BOOLEAN,
@@ -83,6 +84,7 @@ def insert_cards_into_db(conn, cards):
             card.get("name"),
             set_data.get("set_id"),
             set_data.get("label"),
+            card.get("collector_number"),
             classification.get("type"),
             "&".join(classification.get("domain", [])),
             metadata.get("alternate_art", False),
@@ -95,9 +97,9 @@ def insert_cards_into_db(conn, cards):
     cursor.executemany(
         """
         INSERT OR REPLACE INTO cards (
-            id, name, set_id, set_name, type, domain, 
+            id, name, set_id, set_name, collector_number, type, domain, 
             alternate_art, overnumbered, image_url, rarity
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """,
         cards_to_insert,
     )

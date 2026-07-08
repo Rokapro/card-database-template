@@ -165,7 +165,12 @@ def add_card():
 
     print("Found matching cards:")
     for i, card in enumerate(results):
-        print(f"  {i + 1}: {card['name']} ({card['set_id']}) - {card['type']}")
+        collector_info = (
+            f" #{card['collector_number']}" if card.get("collector_number") else ""
+        )
+        print(
+            f"  {i + 1}: {card['name']} ({card['set_id']}{collector_info}) - {card['type']}"
+        )
 
     while True:
         try:

@@ -23,39 +23,38 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row d-flex align-items-center justify-content-center pt-3">
-                <div class="btn-group flex-wrap filter-buttons" role="group">
-                    <button type="button" class="btn btn-outline-primary filter-button active" data-filter="All">All</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Legend">Legend</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Unit">Unit</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Rune">Rune</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Spell">Spell</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Gear">Gear</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Battlefield">Battlefield</button>
-                    <button type="button" class="btn btn-outline-primary filter-button" data-filter="Token">Token</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-3">
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <select class="form-select" id="sortBy" aria-label="Sort by">
-                            <option value="name">Name</option>
-                            <option value="rarity">Rarity</option>
-                        </select>
-                        <label for="sortBy">Sort by</label>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Filters -->
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Type</h5>
+                            <div id="typeFilters" class="filter-column"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Set</h5>
+                            <div id="setFilters" class="filter-column"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Domain</h5>
+                            <div id="domainFilters" class="filter-column"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <!-- Sorting -->
+                <div class="col-lg-3">
+                    <h5>Sort by</h5>
                     <div class="form-floating">
-                        <select class="form-select" id="sortOrder" aria-label="Sort order">
-                            <option value="asc">Ascending</option>
-                            <option value="desc">Descending</option>
+                        <select class="form-select" id="sortDropdown" aria-label="Sort by">
+                            <option value="name_asc">Alphabetical (A-Z)</option>
+                            <option value="name_desc">Alphabetical (Z-A)</option>
+                            <option value="collector_number_asc">Collector Number (Low-High)</option>
+                            <option value="collector_number_desc">Collector Number (High-Low)</option>
+                            <option value="rarity_asc">Rarity (Low-High)</option>
+                            <option value="rarity_desc">Rarity (High-Low)</option>
                         </select>
-                        <label for="sortOrder">Sort order</label>
+                        <label for="sortDropdown">Sort by</label>
                     </div>
                 </div>
             </div>

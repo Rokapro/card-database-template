@@ -1,71 +1,73 @@
-name,set,quantity,type,color,altArt,overnumbered,image
-Azir - Ascendant (Alternate Art),SFD,1,UNIT,CALM,true,false,azir-ascendant-alternate-art-sfd-a.avif
-Diana - Scorn of the Moon,UNL,2,LEGEND,CHAOS&MIND,false,false,diana-scorn-of-the-moon-unl.avif
-Vex - Gloomist,UNL,1,LEGEND,CALM&CHAOS,false,false,vex-gloomist-unl.avif
-Vi - Piltover Enforcer,UNL,2,LEGEND,FURY&ORDER,false,false,vi-piltover-enforcer-unl.avif
-Azir - Emperor of the Sands,SFD,1,LEGEND,CALM&ORDER,false,false,azir-emperor-of-the-sands-sfd.avif
-Lillia - Bashful Bloom,UNL,1,LEGEND,CALM&MIND,false,false,lillia-bashful-bloom-unl.avif
-Pyke - Bloodharbor Ripper,UNL,1,LEGEND,CHAOS&FURY,false,false,pyke-bloodharbor-ripper-unl.avif
-Rengar - Pridestalker,UNL,1,LEGEND,BODY&FURY,false,false,rengar-pridestalker-unl.avif
-Lucian - Purifier,SFD,1,LEGEND,BODY&FURY,false,false,lucian-purifier-sfd.avif
-LeBlanc - Deceiver,UNL,2,LEGEND,MIND&ORDER,false,false,leblanc-deceiver-unl.avif
-Irelia - Blade Dancer,SFD,1,LEGEND,CALM&CHAOS,false,false,irelia-blade-dancer-sfd.avif
-Ornn - Fire Below the Mountain,SFD,1,LEGEND,CALM&MIND,false,false,ornn-fire-below-the-mountain-sfd.avif
-Jax - Grandmaster At Arms,SFD,1,LEGEND,BODY&CALM,false,false,jax-grandmaster-at-arms-sfd.avif
-Ivern - Green Father,UNL,1,LEGEND,CALM&ORDER,false,false,ivern-green-father-unl.avif
-Relentless Pursuit,SFD,1,SPELL,BODY&FURY,false,false,relentless-pursuit-sfd.avif
-Ivern - Nurturer,UNL,2,UNIT,CALM,false,false,ivern-nurturer-unl.avif
-Ivern - Friend to All,UNL,2,UNIT,ORDER,false,false,ivern-friend-to-all-unl.avif
-Daisy!,UNL,1,UNIT,CALM&ORDER,false,false,daisy-unl.avif
-Shadow's Call,UNL,3,SPELL,ORDER,false,false,shadows-call-unl.avif
-Thousand-Tailed Watcher,OGN,2,UNIT,MIND,false,false,thousand-tailed-watcher-ogn.avif
-Daring Poro,OPP,1,UNIT,ORDER,false,false,daring-poro-opp.avif
-LeBlanc - Fragmented,UNL,1,UNIT,ORDER,false,false,leblanc-fragmented-unl.avif
-Royal Guard,SFD,3,UNIT,ORDER,false,false,royal-guard-sfd.avif
-Guards!,SFD,3,SPELL,ORDER,false,false,guards-sfd.avif
-Vanguard Sergeant,OGN,1,UNIT,ORDER,false,false,vanguard-sergeant-ogn.avif
-Rek'Sai - Swarm Queen,SFD,1,UNIT,ORDER,false,false,reksai-swarm-queen-sfd.avif
-Xin Zhao - Vigilant,SFD,1,UNIT,ORDER,false,false,xin-zhao-vigilant-sfd.avif
-Renata Glasc - Industrialist,SFD,2,UNIT,ORDER,false,false,renata-glasc-industrialist-sfd.avif
-Renata Glasc - Industrialist (Alternate Art),SFD,1,UNIT,ORDER,true,false,renata-glasc-industrialist-alternate-art-sfd-a.avif
-Carrion Dredger,UNL,3,UNIT,ORDER,false,false,carrion-dredger-unl.avif
-Zaun Punk,SFD,1,UNIT,ORDER,false,false,zaun-punk-sfd.avif
-Crimson Pigeons,UNL,2,UNIT,ORDER,false,false,crimson-pigeons-unl.avif
-Bonds of Strength,SFD,3,SPELL,ORDER,false,false,bonds-of-strength-sfd.avif
-Unsung Hero,SFD,2,UNIT,ORDER,false,false,unsung-hero-sfd.avif
-Eminent Benefactor,SFD,1,UNIT,ORDER,false,false,eminent-benefactor-sfd.avif
-Sacred Shears,SFD,3,GEAR,ORDER,false,false,sacred-shears-sfd.avif
-Laurent Duelist,OPP,1,UNIT,ORDER,false,false,laurent-duelist-opp.avif
-Glasc Mixologist,SFD,2,UNIT,ORDER,false,false,glasc-mixologist-sfd.avif
-Undertitan,SFD,1,UNIT,ORDER,false,false,undertitan-sfd.avif
-Ashe - Focused,UNL,3,UNIT,ORDER,false,false,ashe-focused-unl.avif
-Black Rose Dignitary,UNL,2,UNIT,ORDER,false,false,black-rose-dignitary-unl.avif
-Eye of the Herald,SFD,1,GEAR,ORDER,false,false,eye-of-the-herald-sfd.avif
-Eye of the Herald,OPP,1,GEAR,ORDER,false,false,eye-of-the-herald-opp.avif
-Bandle Soldier,UNL,4,UNIT,ORDER,false,false,bandle-soldier-unl.avif
-Mageseeker Investigator,UNL,3,UNIT,ORDER,false,false,mageseeker-investigator-unl.avif
-B.F. Sword,SFD,3,GEAR,ORDER,false,false,bf-sword-sfd.avif
-Shepherd's Heirloom,UNL,1,GEAR,ORDER,false,false,shepherds-heirloom-unl.avif
-Soul Harvest,UNL,3,SPELL,ORDER,false,false,soul-harvest-unl.avif
-Forge of the Future,OGN,2,GEAR,ORDER,false,false,forge-of-the-future-ogn.avif
-Loyal Poro,UNL,7,UNIT,ORDER,false,false,loyal-poro-unl.avif
-Scrutinizing Sergeant,UNL,3,UNIT,ORDER,false,false,scrutinizing-sergeant-unl.avif
-Blood Money,SFD,3,SPELL,ORDER,false,false,blood-money-sfd.avif
-Heroic Charge,UNL,1,SPELL,ORDER,false,false,heroic-charge-unl.avif
-Safety Inspector,UNL,1,UNIT,ORDER,false,false,safety-inspector-unl.avif
-Ultrasoft Poro,UNL,3,UNIT,ORDER,false,false,ultrasoft-poro-unl.avif
-Vanguard Armory,SFD,6,GEAR,ORDER,false,false,vanguard-armory-sfd.avif
-Altar of Memories,SFD,1,GEAR,ORDER,false,false,altar-of-memories-sfd.avif
-Undying Loyalty,UNL,1,SPELL,ORDER,false,false,undying-loyalty-unl.avif
-Stalking Wolf,UNL,1,UNIT,ORDER,false,false,stalking-wolf-unl.avif
-Sandshifter,SFD,1,UNIT,ORDER,false,false,sandshifter-sfd.avif
-Enthralling Protector,UNL,1,UNIT,ORDER,false,false,enthralling-protector-unl.avif
-Trove Golem,SFD,1,UNIT,ORDER,false,false,trove-golem-sfd.avif
-Commander Ledros,OGN,1,UNIT,ORDER,false,false,commander-ledros-ogn.avif
-Rally the Troops,SFD,2,SPELL,ORDER,false,false,rally-the-troops-sfd.avif
-Atakhan,UNL,2,UNIT,ORDER,false,false,atakhan-unl.avif
-Hidden Blade,OGN,2,SPELL,ORDER,false,false,hidden-blade-ogn.avif
-Cull the Weak,OGN,6,SPELL,ORDER,false,false,cull-the-weak-ogn.avif
-Grand Strategem,OGN,1,SPELL,ORDER,false,false,grand-strategem-ogn.avif
-Deathgrip,SFD,1,SPELL,ORDER,false,false,deathgrip-sfd.avif
-Renata Glasc - Mastermind,SFD,1,UNIT,MIND,false,false,renata-glasc-mastermind-sfd.avif
+name,set,quantity,type,color,altArt,overnumbered,isPromo,collector_number,rarity,image
+Azir - Ascendant (Alternate Art),SFD,1,UNIT,CALM,true,false,false,50,Showcase,azir-ascendant-alternate-art-sfd-a.avif
+Diana - Scorn of the Moon,UNL,2,LEGEND,CHAOS&MIND,false,false,false,197,Rare,diana-scorn-of-the-moon-unl.avif
+Vex - Gloomist,UNL,1,LEGEND,CALM&CHAOS,false,false,false,193,Rare,vex-gloomist-unl.avif
+Vi - Piltover Enforcer,UNL,2,LEGEND,FURY&ORDER,false,false,false,187,Rare,vi-piltover-enforcer-unl.avif
+Azir - Emperor of the Sands,SFD,1,LEGEND,CALM&ORDER,false,false,false,197,Rare,azir-emperor-of-the-sands-sfd.avif
+Lillia - Bashful Bloom,UNL,1,LEGEND,CALM&MIND,false,false,false,189,Rare,lillia-bashful-bloom-unl.avif
+Pyke - Bloodharbor Ripper,UNL,1,LEGEND,CHAOS&FURY,false,false,false,185,Rare,pyke-bloodharbor-ripper-unl.avif
+Rengar - Pridestalker,UNL,1,LEGEND,BODY&FURY,false,false,false,183,Rare,rengar-pridestalker-unl.avif
+Lucian - Purifier,SFD,1,LEGEND,BODY&FURY,false,false,false,183,Rare,lucian-purifier-sfd.avif
+LeBlanc - Deceiver,UNL,2,LEGEND,MIND&ORDER,false,false,false,199,Rare,leblanc-deceiver-unl.avif
+Irelia - Blade Dancer,SFD,1,LEGEND,CALM&CHAOS,false,false,false,195,Rare,irelia-blade-dancer-sfd.avif
+Ornn - Fire Below the Mountain,SFD,1,LEGEND,CALM&MIND,false,false,false,189,Rare,ornn-fire-below-the-mountain-sfd.avif
+Jax - Grandmaster At Arms,SFD,1,LEGEND,BODY&CALM,false,false,false,193,Rare,jax-grandmaster-at-arms-sfd.avif
+Ivern - Green Father,UNL,1,LEGEND,CALM&ORDER,false,false,false,195,Rare,ivern-green-father-unl.avif
+Relentless Pursuit,SFD,1,SPELL,BODY&FURY,false,false,false,184,Epic,relentless-pursuit-sfd.avif
+Ivern - Nurturer,UNL,2,UNIT,CALM,false,false,false,51,Rare,ivern-nurturer-unl.avif
+Ivern - Friend to All,UNL,2,UNIT,ORDER,false,false,false,177,Epic,ivern-friend-to-all-unl.avif
+Daisy!,UNL,1,UNIT,CALM&ORDER,false,false,false,196,Epic,daisy-unl.avif
+Shadow's Call,UNL,3,SPELL,ORDER,false,false,false,165,Uncommon,shadows-call-unl.avif
+Thousand-Tailed Watcher,OGN,2,UNIT,MIND,false,false,false,116,Rare,thousand-tailed-watcher-ogn.avif
+Daring Poro,OPP,1,UNIT,ORDER,false,false,true,210,Promo,daring-poro-opp.avif
+LeBlanc - Fragmented,UNL,1,UNIT,ORDER,false,false,false,172,Rare,leblanc-fragmented-unl.avif
+Royal Guard,SFD,3,UNIT,ORDER,false,false,false,157,Common,royal-guard-sfd.avif
+Guards!,SFD,3,SPELL,ORDER,false,false,false,154,Common,guards-sfd.avif
+Vanguard Sergeant,OGN,1,UNIT,ORDER,false,false,false,219,Common,vanguard-sergeant-ogn.avif
+Rek'Sai - Swarm Queen,SFD,1,UNIT,ORDER,false,false,false,170,Rare,reksai-swarm-queen-sfd.avif
+Xin Zhao - Vigilant,SFD,1,UNIT,ORDER,false,false,false,176,Rare,xin-zhao-vigilant-sfd.avif
+Renata Glasc - Industrialist,SFD,2,UNIT,ORDER,false,false,false,171,Rare,renata-glasc-industrialist-sfd.avif
+Renata Glasc - Industrialist (Alternate Art),SFD,1,UNIT,ORDER,true,false,false,171,Showcase,renata-glasc-industrialist-alternate-art-sfd-a.avif
+Carrion Dredger,UNL,3,UNIT,ORDER,false,false,false,153,Common,carrion-dredger-unl.avif
+Zaun Punk,SFD,1,UNIT,ORDER,false,false,false,160,Common,zaun-punk-sfd.avif
+Crimson Pigeons,UNL,2,UNIT,ORDER,false,false,false,154,Common,crimson-pigeons-unl.avif
+Bonds of Strength,SFD,3,SPELL,ORDER,false,false,false,151,Common,bonds-of-strength-sfd.avif
+Unsung Hero,SFD,2,UNIT,ORDER,false,false,false,167,Uncommon,unsung-hero-sfd.avif
+Eminent Benefactor,SFD,1,UNIT,ORDER,false,false,false,152,Common,eminent-benefactor-sfd.avif
+Sacred Shears,SFD,3,GEAR,ORDER,false,false,false,172,Rare,sacred-shears-sfd.avif
+Laurent Duelist,OPP,1,UNIT,ORDER,false,false,true,156,Promo,laurent-duelist-opp.avif
+Glasc Mixologist,SFD,2,UNIT,ORDER,false,false,false,165,Uncommon,glasc-mixologist-sfd.avif
+Undertitan,SFD,1,UNIT,ORDER,false,false,false,175,Rare,undertitan-sfd.avif
+Ashe - Focused,UNL,1,UNIT,ORDER,false,false,false,169,Rare,ashe-focused-unl.avif
+Ashe - Focused,UNL,2,UNIT,ORDER,false,false,true,169,Rare,ashe-focused-unl.avif
+Black Rose Dignitary,UNL,2,UNIT,ORDER,false,false,false,152,Common,black-rose-dignitary-unl.avif
+Eye of the Herald,SFD,1,GEAR,ORDER,false,false,false,153,Common,eye-of-the-herald-sfd.avif
+Eye of the Herald,OPP,1,GEAR,ORDER,false,false,true,153,Promo,eye-of-the-herald-opp.avif
+Bandle Soldier,UNL,4,UNIT,ORDER,false,false,false,151,Common,bandle-soldier-unl.avif
+Mageseeker Investigator,UNL,3,UNIT,ORDER,false,false,false,163,Uncommon,mageseeker-investigator-unl.avif
+B.F. Sword,SFD,3,GEAR,ORDER,false,false,false,161,Uncommon,bf-sword-sfd.avif
+Shepherd's Heirloom,UNL,1,GEAR,ORDER,false,false,false,158,Common,shepherds-heirloom-unl.avif
+Soul Harvest,UNL,3,SPELL,ORDER,false,false,false,159,Common,soul-harvest-unl.avif
+Forge of the Future,OGN,2,GEAR,ORDER,false,false,false,212,Common,forge-of-the-future-ogn.avif
+Loyal Poro,UNL,7,UNIT,ORDER,false,false,false,156,Common,loyal-poro-unl.avif
+Scrutinizing Sergeant,UNL,3,UNIT,ORDER,false,false,false,157,Common,scrutinizing-sergeant-unl.avif
+Blood Money,SFD,3,SPELL,ORDER,false,false,false,162,Uncommon,blood-money-sfd.avif
+Heroic Charge,UNL,1,SPELL,ORDER,false,false,false,155,Common,heroic-charge-unl.avif
+Safety Inspector,UNL,1,UNIT,ORDER,false,false,false,164,Uncommon,safety-inspector-unl.avif
+Ultrasoft Poro,UNL,2,UNIT,ORDER,false,false,false,160,Common,ultrasoft-poro-unl.avif
+Ultrasoft Poro,UNL,1,UNIT,ORDER,false,false,true,160,Common,ultrasoft-poro-unl.avif
+Vanguard Armory,SFD,6,GEAR,ORDER,false,false,false,168,Uncommon,vanguard-armory-sfd.avif
+Altar of Memories,SFD,1,GEAR,ORDER,false,false,false,169,Rare,altar-of-memories-sfd.avif
+Undying Loyalty,UNL,1,SPELL,ORDER,false,false,false,168,Uncommon,undying-loyalty-unl.avif
+Stalking Wolf,UNL,1,UNIT,ORDER,false,false,false,166,Uncommon,stalking-wolf-unl.avif
+Sandshifter,SFD,1,UNIT,ORDER,false,false,false,158,Common,sandshifter-sfd.avif
+Enthralling Protector,UNL,1,UNIT,ORDER,false,false,false,162,Uncommon,enthralling-protector-unl.avif
+Trove Golem,SFD,1,UNIT,ORDER,false,false,false,174,Rare,trove-golem-sfd.avif
+Commander Ledros,OGN,1,UNIT,ORDER,false,false,false,231,Rare,commander-ledros-ogn.avif
+Rally the Troops,SFD,2,SPELL,ORDER,false,false,false,166,Uncommon,rally-the-troops-sfd.avif
+Atakhan,UNL,2,UNIT,ORDER,false,false,false,170,Rare,atakhan-unl.avif
+Hidden Blade,OGN,2,SPELL,ORDER,false,false,false,213,Common,hidden-blade-ogn.avif
+Cull the Weak,OGN,6,SPELL,ORDER,false,false,false,209,Common,cull-the-weak-ogn.avif
+Grand Strategem,OGN,1,SPELL,ORDER,false,false,false,233,Rare,grand-strategem-ogn.avif
+Deathgrip,SFD,1,SPELL,ORDER,false,false,false,163,Uncommon,deathgrip-sfd.avif
+Renata Glasc - Mastermind,SFD,1,UNIT,MIND,false,false,false,88,Epic,renata-glasc-mastermind-sfd.avif

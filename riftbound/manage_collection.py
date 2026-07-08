@@ -10,7 +10,7 @@ from PIL import Image
 CSV_PATH = Path(__file__).parent / "cards.csv"
 DB_PATH = Path(__file__).parent / "card-data.db"
 IMAGES_PATH = Path(__file__).parent.parent / "riftbound-images"
-HEADER = ["name", "set", "quantity", "type", "color", "altArt", "overnumbered", "image"]
+HEADER = ["name", "set", "quantity", "type", "color", "altArt", "overnumbered", "isPromo", "collector_number", "rarity", "image"]
 
 # Mappings from DB to CSV format
 COLOR_MAPPING = {
@@ -70,7 +70,7 @@ def save_cards(cards: list[dict[str, str]]) -> None:
         writer.writerows(cards)
 
 
-def normalize_card_key(card: dict[str, str]) -> tuple[str, str, str, str, str, str]:
+def normalize_card_key(card: dict[str, str]) -> tuple[str, str, str, str, str, str, str]:
     return (
         (card.get("name", "") or "").strip().lower(),
         (card.get("set", "") or "").strip().lower(),
@@ -78,6 +78,7 @@ def normalize_card_key(card: dict[str, str]) -> tuple[str, str, str, str, str, s
         (card.get("color", "") or "").strip().lower(),
         str(card.get("altArt", "false")).strip().lower(),
         str(card.get("overnumbered", "false")).strip().lower(),
+        str(card.get("isPromo", "false")).strip().lower(),
     )
 
 
@@ -116,6 +117,23 @@ def search_db_for_card(search_term: str) -> list[dict]:
     except sqlite3.Error as e:
         print(f"Database error: {e}")
         return []
+
+
+def search_db_by_name_and_set(card_name: str, set_id: str) -> dict | None:
+    """Search the database for a card with an exact name and set ID."""
+    try:
+        with sqlite3.connect(DB_PATH) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT * FROM cards WHERE name = ? AND set_id = ?",
+                (card_name, set_id),
+            )
+            result = cursor.fetchone()
+            return dict(result) if result else None
+    except sqlite3.Error as e:
+        print(f"Database error during exact search: {e}")
+        return None
 
 
 def download_and_convert_image(image_url: str, output_path: Path) -> bool:
@@ -215,6 +233,9 @@ def add_card():
         "color": card_color,
         "altArt": str(alt_art).lower(),
         "overnumbered": str(overnumbered).lower(),
+        "isPromo": "false", # Default to false, as we don't have this field in DB yet
+        "collector_number": selected_card.get("collector_number", ""),
+        "rarity": selected_card.get("rarity", ""),
         "image": build_image_filename(
             selected_card["name"], selected_card["set_id"], alt_art, overnumbered
         ),
@@ -222,6 +243,7 @@ def add_card():
 
     cards = load_cards()
     existing_index = find_existing_card_index(cards, new_card)
+
 
     if existing_index is not None:
         existing_card = cards[existing_index]
@@ -331,8 +353,41 @@ def remove_card():
     save_cards(all_cards)
 
 
+def backfill_missing_card_data(cards: list[dict[str, str]]) -> None:
+    """Backfill missing collector_number and rarity for existing cards from the database."""
+    print("Checking for missing card data to backfill...")
+    updated = False
+    for i, card in enumerate(cards):
+        # Check for missing collector_number, rarity, or isPromo
+        if not card.get("collector_number") or not card.get("rarity") or not card.get("isPromo"):
+            db_card = search_db_by_name_and_set(card["name"], card["set"])
+            if db_card:
+                if not card.get("collector_number") and db_card.get("collector_number"):
+                    cards[i]["collector_number"] = str(db_card["collector_number"])
+                    updated = True
+                if not card.get("rarity") and db_card.get("rarity"):
+                    cards[i]["rarity"] = db_card["rarity"]
+                    updated = True
+                # If isPromo is missing, default it to "false" as there's no DB field
+                if not card.get("isPromo"):
+                    cards[i]["isPromo"] = "false"
+                    updated = True
+            elif not card.get("isPromo"): # If no DB card and isPromo is missing, default it
+                cards[i]["isPromo"] = "false"
+                updated = True
+            if updated:
+                print(f"  Backfilled data for {card['name']} ({card['set']})")
+    
+    if updated:
+        save_cards(cards)
+        print("Backfill complete. Updated cards.csv.")
+    else:
+        print("No missing card data found for backfill.")
+
+
 def main_menu():
     """Display the main menu and handle user choices."""
+    backfill_missing_card_data(load_cards()) # Call backfill on startup to update existing data
     while True:
         print("--- Collection Manager ---")
         print("1. Add Card")

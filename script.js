@@ -3,8 +3,13 @@ const cardRow = document.getElementById("cardRow");
 const noResults = document.getElementById("noResults");
 const totalCardCount = document.getElementById("totalCardCount");
 const filterButtons = document.querySelectorAll(".filter-button");
+const sortBy = document.getElementById("sortBy");
+const sortOrderSelect = document.getElementById("sortOrder");
+
 let allCards = [];
 let activeFilter = "All";
+let activeSort = "name";
+let sortOrder = "asc";
 
 fetch("riftbound/cards.csv")
   .then((response) => response.text())
@@ -47,7 +52,7 @@ function renderCards(cards) {
     return matchesType && matchesSearch;
   });
 
-  const sortedCards = sortCardsByNumber(filteredCards);
+  const sortedCards = sortCards(filteredCards, activeSort, sortOrder);
 
   if (sortedCards.length === 0) {
     cardRow.innerHTML = "";
@@ -81,41 +86,53 @@ function renderCards(cards) {
   }).join("");
 }
 
-function sortCardsByNumber(cards) {
-  if (activeFilter === "All") {
-    const typePriority = {
-      legend: 1,
-      unit: 2,
-      spell: 3,
-      rune: 4,
-      gear: 5,
-      battlefield: 6,
-      token: 7,
-    };
+function sortCards(cards, sortBy, order) {
+  const sorted = [...cards];
 
-    return [...cards].sort((a, b) => {
-      const colorA = (a.color || "").split("&")[0].trim().toLowerCase();
-      const colorB = (b.color || "").split("&")[0].trim().toLowerCase();
-      if (colorA !== colorB) {
-        return colorA.localeCompare(colorB);
+  if (sortBy === 'name') {
+    sorted.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortBy === 'rarity') {
+    // To be implemented once rarity data is available
+  } else {
+    // Default sorting if no active filter
+    if (activeFilter === "All") {
+        const typePriority = {
+          legend: 1,
+          unit: 2,
+          spell: 3,
+          rune: 4,
+          gear: 5,
+          battlefield: 6,
+          token: 7,
+        };
+    
+        return [...cards].sort((a, b) => {
+          const colorA = (a.color || "").split("&")[0].trim().toLowerCase();
+          const colorB = (b.color || "").split("&")[0].trim().toLowerCase();
+          if (colorA !== colorB) {
+            return colorA.localeCompare(colorB);
+          }
+    
+          const typeA = (a.type || "").trim().toLowerCase();
+          const typeB = (b.type || "").trim().toLowerCase();
+          const priorityA = typePriority[typeA] ?? 99;
+          const priorityB = typePriority[typeB] ?? 99;
+          if (priorityA !== priorityB) {
+            return priorityA - priorityB;
+          }
+    
+          return a.name.localeCompare(b.name);
+        });
       }
-
-      const typeA = (a.type || "").trim().toLowerCase();
-      const typeB = (b.type || "").trim().toLowerCase();
-      const priorityA = typePriority[typeA] ?? 99;
-      const priorityB = typePriority[typeB] ?? 99;
-      if (priorityA !== priorityB) {
-        return priorityA - priorityB;
-      }
-
-      return a.name.localeCompare(b.name);
-    });
   }
 
-  return [...cards].sort((a, b) => {
-    return a.name.localeCompare(b.name);
-  });
+  if (order === 'desc') {
+    sorted.reverse();
+  }
+
+  return sorted;
 }
+
 
 function updateTotalCardCount(cards) {
   const total = cards.reduce((sum, card) => {
@@ -138,3 +155,14 @@ filterButtons.forEach((button) => {
     renderCards(allCards);
   });
 });
+
+sortBy.addEventListener("change", (e) => {
+    activeSort = e.target.value;
+    renderCards(allCards);
+});
+
+sortOrderSelect.addEventListener("change", (e) => {
+    sortOrder = e.target.value;
+    renderCards(allCards);
+});
+
